@@ -1,14 +1,8 @@
-
 import { CapacitorConfig } from '@capacitor/cli';
-import company from './company.config.json';
-
 const config: CapacitorConfig = {
-  appId: 'com.raseed.business',
-  appName: company.companyName,
+  appId: 'com.raseed.system',
+  appName: 'Raseed',
   webDir: 'dist',
-  bundledWebRuntime: false,
-  plugins: {
-    SplashScreen: { launchShowDuration: 2000 }
-  }
+  bundledWebRuntime: false
 };
 export default config;
