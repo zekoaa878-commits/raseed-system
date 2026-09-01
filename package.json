@@ -1,39 +1,22 @@
 {
-  "name": "raseed-v4-system",
+  "name": "raseed-v4",
   "version": "4.0.0",
-  "description": "نظام رصيد V4 - PWA + اسم شركة قابل للتغيير",
   "main": "electron-main.js",
-  "homepage": "./",
   "scripts": {
-    "build:win": "electron-builder --win --x64",
-    "build:apk": "echo APK will be built via Capacitor - see workflow"
+    "build:win": "electron-builder --win portable --x64 --publish=never"
   },
   "build": {
-    "appId": "com.raseed.v4.system",
+    "appId": "com.raseed.system",
     "productName": "Raseed V4",
-    "directories": {
-      "output": "dist-installers"
-    },
     "files": [
       "index.html",
       "electron-main.js"
     ],
+    "directories": {
+      "output": "dist-installers"
+    },
     "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ],
-      "publisherName": "Raseed System"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "Raseed V4"
-    },
-    "portable": {
-      "artifactName": "Raseed-V4-Portable-${version}.exe"
+      "target": "portable"
     }
   },
   "devDependencies": {
